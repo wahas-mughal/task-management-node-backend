@@ -37,4 +37,10 @@ app.use(bodyparser.urlencoded({ extended: false }));
 //auth route
 app.use("/", authRoute);
 
+app.use("/", (req, res, next) => {
+  res.status(200).json({
+    message: "welcome to apis home page",
+  });
+});
+
 module.exports = app;
