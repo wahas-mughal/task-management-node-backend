@@ -59,7 +59,7 @@ router.post(
       .then((emailExists) => {
         if (emailExists) {
           return res.status(409).json({
-            message: "This email already exists.",
+            message: "This email already exists. Try a different one.",
           });
         } else {
           //hash the password
